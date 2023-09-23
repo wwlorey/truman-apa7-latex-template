@@ -39,6 +39,7 @@ then
 
   xelatex $texFile
   biber $bibFile
+  # Multiple runs of xelatex are required to pickup the bibliography changes.
   xelatex $texFile
   xelatex $texFile
 else
