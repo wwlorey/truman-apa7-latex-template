@@ -4,7 +4,7 @@ bib=''
 
 printHelp() {
   echo "Usage: build [OPTION]...
-Builds the first LaTeX (.tex) file found in the current directory using xelatex.
+Builds the first LaTeX (.tex) file found in this directory using xelatex.
 
 Options
   -b, --bib       use biber to build the bibliography with the first .bcf file found in this directory
