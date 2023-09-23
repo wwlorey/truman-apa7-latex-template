@@ -5,9 +5,9 @@
 \usepackage{enumitem}
 \usepackage{fontspec}
 \usepackage[hidelinks]{hyperref}
-\usepackage{titlesec}
 \usepackage{titling}
 \usepackage{setspace}
+\usepackage{lipsum}
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -18,8 +18,30 @@
 \fancyhead[HR]{\thepage}
 
 \setmainfont{Times New Roman}
+\linespread{2}
 
-\title{Paper Title}
+\usepackage{indentfirst}
+
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\normalsize\bfseries\center}{}{0pt}{}
+\titlespacing*{\section}{0pt}{0pt}{0pt}
+
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{0pt}{0pt}
+
+\titleformat{\subsubsection}[runin]{\normalfont\normalsize\bfseries}{}{.5in}{}
+\titlespacing*{\subsubsection}{0pt}{0pt}{5pt}
+
+
+
+
+
+
+% The `\thetitle` command doesn't consistently return the defined title
+% so save the title in a separate variable.
+\newcommand{\papertitle}{Title of Paper}
+\title{\papertitle}
+
 \author{Author}
 \newcommand{\coursetitle}{Course Title}
 \newcommand{\instructor}{Instructor}
@@ -27,36 +49,74 @@
 
 \renewcommand{\maketitle}{
   \begin{center}
-    \vspace*{170pt}
+    \vspace*{150pt}
 
-    \thetitle
+    \begin{singlespace}
+      \papertitle
 
-    \theauthor
+      \theauthor
+    \end{singlespace}
 
     \vspace{50pt}
 
-    \begin{doublespace}
-      \textit{A paper submitted in partial}
+    \textit{A paper submitted in partial}
 
-      \textit{fulfillment of the requirements of COUN XXX}
+    \textit{fulfillment of the requirements of COUN XXX}
 
-      \textit{\coursetitle}
+    \textit{\coursetitle}
 
-      \textit{\instructor}
+    \textit{\instructor}
 
-      \textit{\duedate}
-    \end{doublespace}
+    \textit{\duedate}
   \end{center}
 }
 
-
 \begin{document}
+
+
+% TITLE
 
 \maketitle
 
-\linespread{2}
+\newpage
 
-This is a test
+
+% ABSTRACT
+
+\section{Abstract}
+\setlength{\parindent}{0in}
+
+\lipsum[6]
+
+\setlength{\parindent}{.5in}
+
+\textit{Keywords:} list of words separated by commas with proper nouns capitalized.
+
+\newpage
+
+
+% BODY OF PAPER
+
+\section{\papertitle}
+
+\lipsum[2]
+
+\subsection{Subsection}
+
+\lipsum[5]
+
+\lipsum[5]
+
+\subsubsection{Subsubsection}
+
+\lipsum[5]
+
+\lipsum[5]
+
+
+
+\newpage
+\section{References}
 
 \end{document}
 
