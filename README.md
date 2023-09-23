@@ -22,5 +22,5 @@ A simple APA7 LaTeX template in a flavor defined by the Truman State University 
   ```
 
 `build` looks for the first `.tex` file found in your current directory and runs `xelatex` on it.
-The `--bib` flag searches for the first `.bcf` file in your current directory (which is
+The `--bib` flag does everything `build` does, it searches for the first `.bcf` file in your current directory (which is
 automatically generated from your `.bib` file) and runs `biber` on it.
