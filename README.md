@@ -24,5 +24,7 @@ This is built without the use of the `apa7` LaTeX package and can be easily modi
   ```
 
 `build` looks for the first `.tex` file found in your current directory and runs `xelatex` on it.
-The `--bib` flag does everything `build` does, it searches for the first `.bcf` file in your current directory (which is
-automatically generated from your `.bib` file) and runs `biber` on it.
+Adding the `--bib` flag does everything `build` does but it also
+searches for the first `.bcf` file in your current directory (which is
+automatically generated from your `.bib` file) and runs `biber` on it before
+building the PDF again to get the final product.
