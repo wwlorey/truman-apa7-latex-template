@@ -13,6 +13,15 @@
 \usepackage{setspace}    % Allow the use of custom spacing blocks.
 \usepackage{titling}     % Allow formatting of the title page.
 
+% TODO: Define paper metadata.
+\newcommand{\papertitle}{Paper Title}
+\author{Author}
+\newcommand{\coursetitle}{Course Title}
+\newcommand{\instructor}{Instructor}
+\newcommand{\duedate}{Due date}
+% The `\thetitle` command doesn't consistently return the defined title so the title has also been saved in `\papertitle`.
+\title{\papertitle}
+
 % Render the page number in upper right hand side of the header.
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -36,15 +45,6 @@
 
 \titleformat{\subsubsection}[runin]{\normalfont\normalsize\bfseries}{}{.5in}{}
 \titlespacing*{\subsubsection}{0pt}{0pt}{5pt}
-
-% TODO: Define paper metadata.
-\newcommand{\papertitle}{Paper Title}
-\author{Author}
-\newcommand{\coursetitle}{Course Title}
-\newcommand{\instructor}{Instructor}
-\newcommand{\duedate}{Due date}
-% The `\thetitle` command doesn't consistently return the defined title so the title has also been saved in `\papertitle`.
-\title{\papertitle}
 
 \renewcommand{\maketitle}{
   \begin{center}
