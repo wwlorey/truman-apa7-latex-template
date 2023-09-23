@@ -22,4 +22,4 @@ found in your current directory and runs `xelatex` on it.
   ./build --bib
   ```
   The `--bib` flag searches for the first `.bcf` file in your current directory (which is
-  generated from your `.bib` file) and runs `biber` on it.
+  automatically generated from your `.bib` file) and runs `biber` on it.
