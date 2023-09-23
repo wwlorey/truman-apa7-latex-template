@@ -12,8 +12,7 @@ A simple APA7 LaTeX template in a flavor defined by the Truman State University 
 
 1. Clone this repository.
 2. Make your changes to `truman-apa7-template.tex`. Rename the file as desired.
-3. Build a PDF using the `build` script. `build` looks for the first `.tex` file
-found in your current directory and runs `xelatex` on it.
+3. Build a PDF using the `build` script.
   ```bash
   ./build
   ```
@@ -21,5 +20,7 @@ found in your current directory and runs `xelatex` on it.
   ```bash
   ./build --bib
   ```
-  The `--bib` flag searches for the first `.bcf` file in your current directory (which is
-  automatically generated from your `.bib` file) and runs `biber` on it.
+
+`build` looks for the first `.tex` file found in your current directory and runs `xelatex` on it.
+The `--bib` flag searches for the first `.bcf` file in your current directory (which is
+automatically generated from your `.bib` file) and runs `biber` on it.
