@@ -29,6 +29,8 @@ fi
 
 if [ $bib ]
 then
+  xelatex $texFile
+
   bibFile=$(find . -type f -name "*.bcf" -print -quit)
 
   # Check if a .bcf file was found
@@ -37,8 +39,8 @@ then
       exit 1
   fi
 
-  xelatex $texFile
   biber $bibFile
+
   # Multiple runs of xelatex are required to pickup the bibliography changes.
   xelatex $texFile
   xelatex $texFile
